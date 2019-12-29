@@ -1,0 +1,17 @@
+<mat-form-field>
+  <mat-label>Select region</mat-label>
+  <mat-select [(value)]="selectedRegion" (selectionChange)="regionSelectionChange()">
+    <mat-option *ngFor="let region of regions" [value]="region.name">
+      {{region.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field *ngIf="selectedRegion">
+  <mat-label>Select city</mat-label>
+  <mat-select [(value)]="selectedCountry">
+    <mat-option *ngFor="let country of allCountryDetails" [value]="country.name">
+      {{country.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<app-city *ngIf="selectedCountry" [city]="selectedCountry"></app-city>
