@@ -13,7 +13,7 @@ export class RegionComponent implements OnInit {
   constructor(private wetherService: WetherService) { }
   show: boolean;
   selectedRegion: string;
-  selectedCountry: string;
+  selectedCountry: CountryDetails;
   selectedCity: string;
   regions: Region[] = [
     { id: 1, name: 'Europe' },

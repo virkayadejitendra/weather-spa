@@ -14,6 +14,7 @@ import { RegionComponent } from './region/region.component';
 import { CityComponent } from './city/city.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from "@angular/common";
+import { CountryComponent } from './country/country.component';
 
 @NgModule({
    declarations: [
@@ -21,10 +22,10 @@ import { CommonModule } from "@angular/common";
       NavbarComponent,
       NavtabsComponent,
       RegionComponent,
-      CityComponent
+      CityComponent,
+      CountryComponent
    ],
    imports: [
-
       HttpClientModule,
       BrowserModule,
       AppRoutingModule,
