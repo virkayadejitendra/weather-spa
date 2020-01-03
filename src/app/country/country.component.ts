@@ -8,8 +8,12 @@ import { CountryDetails } from '../_models/regionModels';
 })
 export class CountryComponent implements OnInit {
   @Input() country: CountryDetails;
-  imageUrl = 'https://lipis.github.io/flag-icon-css/flags/4x3/af.svg';
-  constructor() { }
-  ngOnInit() { }
+  imageUrl: string;
+  constructor() {
+  }
+  ngOnInit() {
+    this.imageUrl = 'https://lipis.github.io/flag-icon-css/flags/4x3/' + this.country.alpha2Code.toLocaleLowerCase() + '.svg';
+
+  }
 
 }
