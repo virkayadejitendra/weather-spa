@@ -15,5 +15,15 @@ export class CountryComponent implements OnInit {
     this.imageUrl = 'https://lipis.github.io/flag-icon-css/flags/4x3/' + this.country.alpha2Code.toLocaleLowerCase() + '.svg';
 
   }
+  private getUserLocation() {
+    /// locate the user
+    if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(position => {
+        //this.lat = 48.8566;//position.coords.latitude;
+        //this.lng =2.3522;// position.coords.longitude;
+//console.log(this.lat + " " +this.lng);
+      });
+    }
+  }
 
 }

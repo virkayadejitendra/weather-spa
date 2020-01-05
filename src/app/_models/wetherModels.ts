@@ -2,6 +2,7 @@
 export interface City {
     name: string;
     id: number;
+    latlang:number[]
 }
 export interface Region {
     id: number;

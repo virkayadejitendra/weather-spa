@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WetherService } from '../_services/wether.service';
+import { City } from '../_models/wetherModels';
 
 @Component({
   selector: 'app-city',
@@ -7,7 +8,7 @@ import { WetherService } from '../_services/wether.service';
   styleUrls: ['./city.component.css']
 })
 export class CityComponent implements OnInit {
-  @Input() city: string;
+  @Input() city: City;
 
   constructor(private wetherService: WetherService) {
   }

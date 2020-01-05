@@ -1,0 +1,17 @@
+{{city|json}}
+<div *ngIf="city?.latlng">
+  {{city|json}}
+    <agm-map [latitude]="city?.latlng[0]" [longitude]="city?.latlng[0]">
+  
+      <agm-marker [latitude]="city?.latlng[0]" [longitude]="city?.latlng[0]">
+  
+        <agm-info-window>
+          <h3><strong>city.name</strong></h3>
+          <p>You are here!</p>
+        </agm-info-window>
+  
+      </agm-marker>
+  
+    </agm-map>
+  
+  <div>
